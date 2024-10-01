@@ -1,0 +1,17 @@
+streamlit
+python-dotenv
+beautifulsoup4
+
+langchain_google_genai
+langchain
+langchain_community
+langchain_chroma #pip install -qU "langchain-chroma>=0.1.2"
+langchain_core
+langchain_text_splitters
+langchain_huggingface
+langchain_groq
+sentence_transformers
+Jinja2
+python-dotenv 
+fastapi
+uvicorn

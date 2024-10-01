@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/frontend/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<style>
+
+    .responsive-img {
+        height: 229px;
+        display: block;
+        margin: 0 auto;
+        /* Centers the image */
+    }
+
+    .btnbot {
+        background-color: #06c;
+        border-radius: 100%;
+        bottom: 10px;
+        cursor: pointer;
+        font-size: 23px;
+        color: white;
+        height: 55px;
+        text-align: center;
+        font-weight: 800;
+        margin-top: 30px;
+        right: 10px;
+        width: 55px;
+        border-bottom-right-radius: 50px;
+    }
+
+    .bi-chat-right-text {
+        font-size: 20px;
+    }
+
+    .send-icon {
+        transition: transform 0.3s;
+        /* Smooth transition */
+        cursor: pointer;
+        /* Change cursor to pointer */
+        transform: rotate(43deg);
+    }
+
+    .send__button {
+
+        width: 50px;
+        height: 50px;
+        background-color: #06c;
+        color: white;
+        border-radius: 100%;
+    }
+
+    /* colse*/
+    #close-icon {
+        font-size: 25px;
+    }
+
+    .close-btn-toogle {
+        display: none;
+    }
+
+
+
+    .btnbot-tooltip:hover >.close-btn-toogle {
+        display: block;
+        position: absolute;
+        left: 202px;
+        font-size: 23px;
+        bottom: 42px;
+        z-index: 25;
+        background: #06c;
+        font-weight: bold;
+        border-radius: 100%;
+        height: 25px;
+        width: 24px;
+        text-align: center;
+    }
+
+    .hidden {
+
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div class="loader" style="display: none;"> </div>
+                    <div class="chatbox__image--header">
+                        <img class="botim" src="/frontend/images/Animation - 1727163086584.gif" alt="image"
+                            class="responsive-img">
+                    </div>
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input class="inputbox" type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button"> <svg class="send-icon"
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16">
+                            <path
+                                d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
+                        </svg></button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button class="btnbot" onclick="toggleChat()">
+                    <i id="chat-icon" class="bi bi-chat-right-text"></i>
+                    <span id="close-icon" style="display: none; "><i class="bi bi-x"></i></span>
+                </button>
+
+                <div class="btnbot-tooltip" id="btnbot-tip">
+                    <p class="parag">We're Online!</p>
+                    <p class="parag">How may I help you today?</p>
+                    <span class="close-btn-toogle" onclick="closeTooltip()"><i class="bi bi-x"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+
+</body>
+
+</html>
